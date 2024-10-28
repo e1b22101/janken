@@ -57,7 +57,7 @@ public class JankenController {
 
     model.addAttribute("result", "draw");
     model.addAttribute("myhand", yourhand);
-    return "match";
+    return "wait";
   }
 
   @GetMapping("/fight_choki")

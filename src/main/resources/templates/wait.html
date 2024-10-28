@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/schema/security">
+
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janken Info</title>
+</head>
+
+<body>
+  <a href="/logout">ログアウト</a>
+  <h1>[[${loginUser}]] V.S. [[${opponent.userName}]]</h1>
+  <a href="/janken">もどる</a>
+
+  <div>
+    <p th:if="${myhand}">[[${loginUser}]]の手 [[${myhand}]]</p>
+    <p th:if="${myhand}">[[${opponent.userName}]]の手 Gu</p>
+    <p th:if="${result}">結果 [[${result}]]</p>
+  </div>
+</body>

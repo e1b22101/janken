@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface MatchMapper {
-  @Select("SELECT id, user1, user2, user1Hand, user2Hand FROM matches;")
+  @Select("SELECT id, user1, user2, user1Hand, user2Hand, isActive FROM matches;")
   ArrayList<Match> selectAllByMatch();
 
   @Select("SELECT * FROM matches WHERE id = #{id};")
