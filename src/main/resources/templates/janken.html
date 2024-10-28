@@ -21,6 +21,18 @@
     </li>
   </ul>
 
+  <h2>アクティブな試合</h2>
+  <div>
+    <tr th:each="matchinfo : ${matchInfo}"> <!-- matchinfoリストをループ -->
+      <td>id:[[${matchinfo.id}]]</td>
+      <td>user1:[[${matchinfo.user1}]]</td>
+      <td>user2:[[${matchinfo.user2}]]</td>
+      <td>user1の手:[[${matchinfo.user1Hand}]]</td>
+      <td>isActive:[[${matchinfo.isActive}]]</td>
+      <br>
+    </tr>
+  </div>
+
   <h2>試合結果</h2>
   <div>
     <tr th:each="match : ${matches}"> <!-- usersリストをループ -->
